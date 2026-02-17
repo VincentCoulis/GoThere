@@ -28,6 +28,7 @@ function SearchPage() {
   const [notFound, setNotFound] = useState(false);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
   const containerRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   // Detect "not found" state: ?q= is present but no suggestions matched
   useEffect(() => {
@@ -141,6 +142,7 @@ function SearchPage() {
         <div ref={containerRef} className="relative">
           <form onSubmit={handleGo} className="flex w-full gap-2">
             <input
+              ref={inputRef}
               type="text"
               value={phrase}
               onChange={(e) => {
@@ -190,18 +192,43 @@ function SearchPage() {
           )}
         </div>
 
-        {/* Not found message */}
+        {/* Not found state */}
         {notFound && queryPhrase && (
-          <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-950">
-            <p className="text-sm text-amber-800 dark:text-amber-200">
-              No destination found for &ldquo;{queryPhrase}&rdquo;.
+          <div className="mt-6 rounded-xl border border-zinc-200 p-6 text-center dark:border-zinc-800">
+            <h2 className="text-base font-semibold text-zinc-900 dark:text-zinc-50">
+              No destination found
+            </h2>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
+              We couldn&apos;t find a phrase matching
+              <br />
+              &ldquo;
+              <span className="font-medium text-zinc-700 dark:text-zinc-300">
+                {queryPhrase}
+              </span>
+              &rdquo;
             </p>
-            <Link
-              href={`/create?phrase=${encodeURIComponent(queryPhrase)}`}
-              className="mt-1 inline-block text-sm font-medium text-amber-900 underline hover:text-amber-700 dark:text-amber-100 dark:hover:text-amber-300"
-            >
-              Create this destination
-            </Link>
+            <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+              It may not exist yet, or it may have been removed.
+            </p>
+            <div className="mt-5 flex flex-col items-center gap-2 sm:flex-row sm:justify-center">
+              <button
+                type="button"
+                onClick={() => {
+                  setPhrase("");
+                  setNotFound(false);
+                  inputRef.current?.focus();
+                }}
+                className="rounded-lg bg-zinc-900 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-300"
+              >
+                Try another phrase
+              </button>
+              <Link
+                href={`/create?phrase=${encodeURIComponent(queryPhrase)}`}
+                className="text-sm text-zinc-500 underline hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
+              >
+                Create this phrase
+              </Link>
+            </div>
           </div>
         )}
       </div>
