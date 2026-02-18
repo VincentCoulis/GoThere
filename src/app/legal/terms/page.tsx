@@ -189,10 +189,10 @@ export default function TermsPage() {
             GoThere
             <br />
             <a
-              href="mailto:admin@gothere.cc"
+              href="mailto:admin@gothere.to"
               className="underline hover:text-zinc-900 dark:hover:text-zinc-50"
             >
-              admin@gothere.cc
+              admin@gothere.to
             </a>
           </p>
         </section>

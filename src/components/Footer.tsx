@@ -19,7 +19,7 @@ export default function Footer() {
             Privacy
           </Link>
           <a
-            href="mailto:admin@gothere.cc"
+            href="mailto:admin@gothere.to"
             className="transition-colors hover:text-zinc-700 dark:hover:text-zinc-300"
           >
             Contact

@@ -25,10 +25,10 @@ export default function PrivacyPage() {
           <p className="mt-2">
             Contact:{" "}
             <a
-              href="mailto:admin@gothere.cc"
+              href="mailto:admin@gothere.to"
               className="underline hover:text-zinc-900 dark:hover:text-zinc-50"
             >
-              admin@gothere.cc
+              admin@gothere.to
             </a>
           </p>
         </section>
@@ -125,10 +125,10 @@ export default function PrivacyPage() {
           <p className="mt-2">
             To exercise these rights, contact:{" "}
             <a
-              href="mailto:admin@gothere.cc"
+              href="mailto:admin@gothere.to"
               className="underline hover:text-zinc-900 dark:hover:text-zinc-50"
             >
-              admin@gothere.cc
+              admin@gothere.to
             </a>
           </p>
         </section>
