@@ -134,7 +134,7 @@ function SearchPage() {
         into simple phrases.
       </h1>
       <p className="mb-14 max-w-lg text-center text-lg text-zinc-500 dark:text-zinc-400">
-        Easy to say. Easy to type.
+        Type the phrase. Go there.
       </p>
 
       {/* Card */}
