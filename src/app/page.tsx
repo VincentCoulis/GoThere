@@ -156,11 +156,11 @@ function SearchPage() {
               onKeyDown={handleKeyDown}
               placeholder="Type your phrase"
               autoFocus
-              className="flex-1 rounded-lg border border-zinc-300 px-4 py-3 text-lg outline-none transition-colors focus:border-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50 dark:focus:border-zinc-400"
+              className="min-w-0 flex-1 rounded-lg border border-zinc-300 px-4 py-3 text-lg outline-none transition-colors focus:border-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50 dark:focus:border-zinc-400"
             />
             <button
               type="submit"
-              className="shrink-0 rounded-lg bg-zinc-900 px-8 py-3 text-lg font-medium whitespace-nowrap text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-300"
+              className="shrink-0 rounded-lg bg-zinc-900 px-5 py-3 text-lg font-medium whitespace-nowrap text-white transition-colors hover:bg-zinc-700 sm:px-8 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-300"
             >
               GoThere
             </button>
