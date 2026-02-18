@@ -12,7 +12,7 @@ GoThere is a "destination engine" — users assign a human-readable phrase to an
 - **Tailwind CSS v4** (PostCSS plugin, no `tailwind.config` — uses CSS-first configuration)
 - **Supabase** (PostgreSQL database, Auth, Row Level Security)
 - **@supabase/ssr** for server-side Supabase client with cookie-based auth
-- **Resend SMTP** for transactional email (magic link auth) on `gothere.cc`
+- **Resend SMTP** for transactional email (magic link auth) on `gothere.to`
 
 ## Commands
 
@@ -137,6 +137,6 @@ The `/dashboard/review` page is the primary interface for link management:
 - **Core features:** Complete (phrase redirects, auth, create, dashboard, autocomplete, click tracking)
 - **Security:** Defense-in-depth redirect validation, 3-layer Security Watchman with quarantine on both create and edit flows
 - **Data:** Soft delete (`deleted_at` column), click tracking via `increment_click_count` RPC
-- **Email:** Fully migrated to Resend SMTP for `gothere.cc`
+- **Email:** Fully migrated to Resend SMTP for `gothere.to`
 - **Admin:** `/dashboard/review` is the primary interface for link management, RLS-backed via `is_admin()` SQL function + `app_config` table
 - **Migrations:** 3 applied — `00001` (schema), `00002` (status/quarantine), `00003` (RLS fixes + admin policies + soft delete + click tracking)

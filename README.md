@@ -4,7 +4,7 @@ Turn long, complicated links into simple phrases.
 
 GoThere is a destination engine. Users assign a human-readable phrase to any URL, and anyone can type that phrase to be redirected to the correct page. It bridges the gap between the offline and online worlds — printed sheets, spoken links, signage, and anywhere URLs are hard to type.
 
-**Live at [gothere.cc](https://gothere.cc)**
+**Live at [gothere.to](https://gothere.to)**
 
 ## How it works
 
@@ -29,7 +29,7 @@ GoThere is a destination engine. Users assign a human-readable phrase to any URL
 - **Next.js 16** (App Router, Turbopack) with TypeScript
 - **Tailwind CSS v4** (CSS-first configuration)
 - **Supabase** (PostgreSQL, Auth, Row Level Security)
-- **Resend SMTP** for transactional email on `gothere.cc`
+- **Resend SMTP** for transactional email on `gothere.to`
 
 ## Getting started
 
@@ -52,7 +52,7 @@ Open [http://localhost:3000](http://localhost:3000).
 |----------|----------|-------------|
 | `NEXT_PUBLIC_SUPABASE_URL` | Yes | Supabase project URL |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Yes | Supabase publishable key |
-| `NEXT_PUBLIC_SITE_URL` | No | Public site URL (defaults to `https://gothere.cc`) |
+| `NEXT_PUBLIC_SITE_URL` | No | Public site URL (defaults to `https://gothere.to`) |
 | `GOOGLE_SAFE_BROWSING_API_KEY` | No | Enables Safe Browsing checks |
 | `GEMINI_API_KEY` | No | Enables AI-powered URL analysis |
 | `ADMIN_EMAIL` | No | Email address for admin access to review queue |

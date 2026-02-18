@@ -162,7 +162,7 @@ function SuccessView({ phrase }: { phrase: string }) {
   const origin =
     typeof window !== "undefined"
       ? window.location.origin
-      : process.env.NEXT_PUBLIC_SITE_URL ?? "https://gothere.cc";
+      : process.env.NEXT_PUBLIC_SITE_URL ?? "https://gothere.to";
   const fullLink = `${origin}/go/${encodeURIComponent(phrase)}`;
 
   const generateQR = useCallback(async () => {

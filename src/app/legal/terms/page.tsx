@@ -26,7 +26,7 @@ export default function TermsPage() {
             phrase and be redirected to that URL.
           </p>
           <p className="mt-2">
-            The Service is currently provided at gothere.cc.
+            The Service is currently provided at gothere.to.
           </p>
         </section>
 
