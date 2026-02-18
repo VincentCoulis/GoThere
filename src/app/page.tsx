@@ -125,7 +125,7 @@ function SearchPage() {
 
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center bg-white px-4 dark:bg-zinc-950">
-      <p className="mb-6 text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+      <p className="mb-6 text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
         GoThere
       </p>
       <h1 className="mb-3 text-center text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-50">
@@ -133,12 +133,12 @@ function SearchPage() {
         <br />
         into simple phrases.
       </h1>
-      <p className="mb-10 max-w-lg text-center text-lg text-zinc-500 dark:text-zinc-400">
+      <p className="mb-14 max-w-lg text-center text-lg text-zinc-500 dark:text-zinc-400">
         Easy to say. Easy to type.
       </p>
 
       {/* Card */}
-      <div className="w-full max-w-2xl rounded-xl border border-zinc-200 p-6 shadow-sm sm:p-8 dark:border-zinc-800">
+      <div className="w-full max-w-2xl rounded-xl border border-zinc-200 p-6 shadow-md sm:p-8 dark:border-zinc-700">
         <div ref={containerRef} className="relative">
           <form onSubmit={handleGo} className="flex w-full gap-2">
             <input
@@ -208,7 +208,7 @@ function SearchPage() {
               &rdquo;
             </p>
             <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-              It may not exist yet, or it may have been removed.
+              It may not exist yet.
             </p>
             <div className="mt-5 flex flex-col items-center gap-2 sm:flex-row sm:justify-center">
               <button
@@ -234,7 +234,7 @@ function SearchPage() {
       </div>
 
       {/* CTAs below card */}
-      <div className="mt-6 flex flex-col items-center gap-2">
+      <div className="mt-8 flex flex-col items-center gap-2">
         <Link
           href="/create"
           className="rounded-lg border border-zinc-300 px-6 py-2.5 text-sm font-medium text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-50 dark:hover:bg-zinc-900"
