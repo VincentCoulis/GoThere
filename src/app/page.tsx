@@ -154,7 +154,7 @@ function SearchPage() {
                 suggestions.length > 0 && setShowSuggestions(true)
               }
               onKeyDown={handleKeyDown}
-              placeholder='Type a phrase, e.g. "Nike UK mens t-shirts"'
+              placeholder="Type your phrase"
               autoFocus
               className="flex-1 rounded-lg border border-zinc-300 px-4 py-3 text-lg outline-none transition-colors focus:border-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50 dark:focus:border-zinc-400"
             />
