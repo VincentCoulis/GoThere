@@ -160,9 +160,9 @@ function SearchPage() {
             />
             <button
               type="submit"
-              className="rounded-lg bg-zinc-900 px-6 py-3 text-lg font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-300"
+              className="shrink-0 rounded-lg bg-zinc-900 px-8 py-3 text-lg font-medium whitespace-nowrap text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-300"
             >
-              Go
+              GoThere
             </button>
           </form>
 
@@ -233,8 +233,11 @@ function SearchPage() {
         )}
       </div>
 
-      {/* CTAs below card */}
-      <div className="mt-8 flex flex-col items-center gap-2">
+      {/* Helper text + CTAs below card */}
+      <p className="mt-6 text-sm text-zinc-500 dark:text-zinc-400">
+        Don&apos;t have a phrase yet? Create one in seconds.
+      </p>
+      <div className="mt-3 flex flex-col items-center gap-2">
         <Link
           href="/create"
           className="rounded-lg border border-zinc-300 px-6 py-2.5 text-sm font-medium text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-50 dark:hover:bg-zinc-900"
