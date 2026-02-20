@@ -18,6 +18,7 @@ export default function CreatePage() {
 function CreatePageInner() {
   const searchParams = useSearchParams();
   const prefillPhrase = searchParams.get("phrase") ?? "";
+  const prefillUrl = searchParams.get("url") ?? "";
 
   const [state, action, pending] = useActionState<CreateResult | null, FormData>(
     createDestination,
@@ -26,7 +27,7 @@ function CreatePageInner() {
 
   const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
   const [phraseValue, setPhraseValue] = useState(prefillPhrase);
-  const [urlValue, setUrlValue] = useState("");
+  const [urlValue, setUrlValue] = useState(prefillUrl);
 
   useEffect(() => {
     const supabase = createClient();
