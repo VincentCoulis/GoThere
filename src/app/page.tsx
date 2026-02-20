@@ -267,7 +267,7 @@ function SearchPage() {
 
       {/* Trust row */}
       <p className="mt-10 text-xs tracking-wide text-zinc-400 dark:text-zinc-600">
-        No ads · No student accounts required · Safety checks built-in
+        No ads · No account required to access · Safety checks built-in
       </p>
     </div>
   );
