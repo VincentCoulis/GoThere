@@ -30,6 +30,16 @@ function SearchPage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // If Supabase redirected auth params to the homepage, forward to callback
+  useEffect(() => {
+    const code = searchParams.get("code");
+    const tokenHash = searchParams.get("token_hash");
+    if (code || tokenHash) {
+      const callbackUrl = `/auth/callback?${searchParams.toString()}`;
+      router.replace(callbackUrl);
+    }
+  }, [searchParams, router]);
+
   // Detect "not found" state: ?q= is present but no suggestions matched
   useEffect(() => {
     if (!queryPhrase) {
