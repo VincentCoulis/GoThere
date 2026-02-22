@@ -139,9 +139,9 @@ function SearchPage() {
         GoThere
       </p>
       <h1 className="mb-3 text-center text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-50">
-        Turn long, complicated links
+        When a link can&apos;t be clicked,
         <br />
-        into simple phrases.
+        make a phrase.
       </h1>
       <p className="mb-14 max-w-lg text-center text-lg text-zinc-500 dark:text-zinc-400">
         Type the phrase. Go there.
