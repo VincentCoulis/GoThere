@@ -149,8 +149,11 @@ function SearchPage() {
 
       {/* Card */}
       <div className="w-full max-w-2xl rounded-xl border border-zinc-200 p-6 shadow-md sm:p-8 dark:border-zinc-700">
+        <p className="mb-4 text-center text-sm font-medium text-zinc-600 dark:text-zinc-400">
+          Enter a phrase to GoThere, or link it to a destination
+        </p>
         <div ref={containerRef} className="relative">
-          <form onSubmit={handleGo} className="flex w-full gap-2">
+          <form onSubmit={handleGo} className="flex w-full flex-col gap-3">
             <input
               ref={inputRef}
               type="text"
@@ -166,14 +169,22 @@ function SearchPage() {
               onKeyDown={handleKeyDown}
               placeholder="Type your phrase"
               autoFocus
-              className="min-w-0 flex-1 rounded-lg border border-zinc-300 px-4 py-3 text-lg outline-none transition-colors focus:border-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50 dark:focus:border-zinc-400"
+              className="w-full rounded-lg border border-zinc-300 px-4 py-3 text-lg outline-none transition-colors focus:border-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50 dark:focus:border-zinc-400"
             />
-            <button
-              type="submit"
-              className="shrink-0 rounded-lg bg-zinc-900 px-5 py-3 text-lg font-medium whitespace-nowrap text-white transition-colors hover:bg-zinc-700 sm:px-8 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-300"
-            >
-              GoThere
-            </button>
+            <div className="flex gap-2">
+              <Link
+                href="/create"
+                className="flex-1 rounded-lg border border-zinc-900 px-5 py-3 text-center text-lg font-medium text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-50 dark:text-zinc-50 dark:hover:bg-zinc-800"
+              >
+                Create Destination
+              </Link>
+              <button
+                type="submit"
+                className="flex-1 rounded-lg bg-zinc-900 px-5 py-3 text-lg font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-300"
+              >
+                GoThere
+              </button>
+            </div>
           </form>
 
           {showSuggestions && suggestions.length > 0 && (
